@@ -1,0 +1,29 @@
+<h1>Journal#new</h1>
+<p>Find me in app/views/journal/new.html.erb</p>
+
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  
+  <div class="field">
+    <%= f.label	:images %><br>
+    <%= f.text_field :images %>
+  </div>
+  
+  <div class="date">
+  	<%= f.label :date %><br>
+  	<%= f.text_field :date %>
+  </div>
+
+ <div class="actions">
+ 	<%= f.submit %>
+ </div>
+
+<% end %>

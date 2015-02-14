@@ -1,0 +1,33 @@
+<h1>Journal#index</h1>
+<p>Find me in app/views/journal/index.html.erb</p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>post</th>
+      <th>title</th>
+      <th>description</th>
+      <th>images</th>
+      <th>travel date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= post.email %></td>
+        <td><%= post.dob %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
